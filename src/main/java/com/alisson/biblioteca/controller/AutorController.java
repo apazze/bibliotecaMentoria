@@ -1,6 +1,8 @@
 package com.alisson.biblioteca.controller;
 
+import com.alisson.biblioteca.dto.AutorDto;
 import com.alisson.biblioteca.entity.Autor;
+import com.alisson.biblioteca.mapper.AutorMapper;
 import com.alisson.biblioteca.repository.AutorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,9 +22,8 @@ public class AutorController {
     }
 
     @PostMapping(path = "/inserir")
-    public Autor cadastrar(@RequestBody Autor autor){
+    public Autor cadastrar(@RequestBody AutorDto autorDto){
+        Autor autor = AutorMapper.paraAutor(autorDto);
         return autorRepository.save(autor);
     }
-
-
 }
