@@ -8,6 +8,16 @@ public class Livro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String isbn;
+
+    public Livro(String isbn, String titulo, Autor autor) {
+        this.isbn = isbn;
+        this.titulo = titulo;
+        this.autor = autor;
+    }
+
+    public Livro() {
+    }
+
     private String titulo;
     @ManyToOne(cascade = CascadeType.PERSIST)
     Autor autor;
@@ -31,6 +41,10 @@ public class Livro {
     public String getTitulo() { return titulo; }
 
     public void setTitulo(String titulo) { this.titulo = titulo; }
+
+    public Long getId() {
+        return id;
+    }
 
     @Override
     public String toString() {

@@ -9,11 +9,7 @@ import java.util.List;
 public class LivroMapper {
 
     public static Livro paraLivro(LivroDto livroDto){
-        Livro livro = new Livro();
-        livro.setIsbn(livroDto.getIsbn());
-        livro.setTitulo(livroDto.getTitulo());
-        livro.setAutor(livroDto.getAutor());
-        return livro;
+        return new Livro(livroDto.getIsbn(), livroDto.getTitulo(), livroDto.getAutor());
     }
 
     public static List<Livro> paraListaDeLivros(List<LivroDto> publicacoes) {

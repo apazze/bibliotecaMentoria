@@ -5,11 +5,7 @@ import com.alisson.biblioteca.entity.Autor;
 
 public class AutorMapper {
 
-
     public static Autor paraAutor(AutorDto autorDto) {
-        Autor autor = new Autor();
-        autor.setNome(autorDto.getNome());
-        autor.setPublicacoes(LivroMapper.paraListaDeLivros(autorDto.getPublicacoes()));
-        return autor;
+        return new Autor(autorDto.getNome(), LivroMapper.paraListaDeLivros(autorDto.getPublicacoes()));
     }
 }

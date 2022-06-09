@@ -10,6 +10,13 @@ public class Autor {
     private String nome;
     @OneToMany(cascade = CascadeType.PERSIST)
     private List<Livro> publicacoes;
+    public Autor() {
+    }
+
+    public Autor(String nome, List<Livro> publicacoes) {
+        this.nome = nome;
+        this.publicacoes = publicacoes;
+    }
 
     public String getNome() {
         return nome;
@@ -25,5 +32,9 @@ public class Autor {
 
     public void setPublicacoes(List<Livro> publicacoes) {
         this.publicacoes = publicacoes;
+    }
+
+    public Long getId() {
+        return id;
     }
 }

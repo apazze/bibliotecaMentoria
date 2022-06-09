@@ -6,6 +6,11 @@ public class AutorDto {
     private String nome;
     private List<LivroDto> publicacoes;
 
+    public AutorDto(String nome, List<LivroDto> publicacoes) {
+        this.nome = nome;
+        this.publicacoes = publicacoes;
+    }
+
     public String getNome() {
         return nome;
     }

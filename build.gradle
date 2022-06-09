@@ -21,7 +21,8 @@ dependencies {
 	implementation "com.h2database:h2"
 
 	implementation 'org.mapstruct:mapstruct:1.4.2.Final'
-	annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+    implementation 'junit:junit:4.13.1'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
@@ -30,6 +31,8 @@ dependencies {
 
 	implementation 'net.javacrumbs.shedlock:shedlock-spring:4.33.0'
 	implementation 'net.javacrumbs.shedlock:shedlock-provider-jdbc-template:4.33.0'
+
+	implementation group: 'com.google.code.gson', name: 'gson', version: '2.9.0'
 
 }
 

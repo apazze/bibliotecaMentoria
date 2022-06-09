@@ -12,9 +12,8 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/livro")
 public class LivroController {
-
     @Autowired
-    LivroRepository livroRepository;
+    private LivroRepository livroRepository;
 
     @GetMapping
     public List<Livro>GetLivros(){

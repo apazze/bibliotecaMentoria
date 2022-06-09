@@ -7,6 +7,11 @@ public class LivroDto {
     private String titulo;
     Autor autor;
 
+    public LivroDto(String isbn, String titulo) {
+        this.isbn = isbn;
+        this.titulo = titulo;
+    }
+
     public String getIsbn() {
         return isbn;
     }
